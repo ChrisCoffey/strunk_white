@@ -5,6 +5,7 @@ function showReviewTemplate() {
       var el = document.getElementById('new_comment_field');
       if (el !== null) {
         el.innerText = xhr.responseText;
+        el.style.height = "450px";
       }
     }
   };
