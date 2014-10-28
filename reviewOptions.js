@@ -1,0 +1,28 @@
+var leaf_code_review_template = "https://raw.github.com/leafme/strunk_white/master/review_template.md";
+var key = "template";
+
+function change_url(e) {
+  var obj = {};
+  obj[key] = e.target.value || quick_left_template;
+  chrome.storage.sync.set(obj);
+}
+
+function restore_options() {
+  chrome.storage.sync.get(key, function (obj) {
+    document.getElementById("url").value = obj[key];
+  });
+}
+
+document.addEventListener('DOMContentLoaded', restore_options);
+document.querySelector('#url').addEventListener('change', change_url);
+document.querySelector('#reset').addEventListener('click', function () {
+  chrome.storage.sync.clear(function () {
+    var obj = {};
+    obj[key] = leaf_code_review_template;
+    chrome.storage.sync.set(obj);
+    document.querySelector('#url').value = leaf_code_review_template;
+  });
+});
+document.querySelector('#close').addEventListener('click', function () {
+  window.close();
+});

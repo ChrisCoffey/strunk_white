@@ -1,0 +1,30 @@
+{
+	"name": "Strunk & White",
+	"description": "Gihub Pull Request standardization tool",
+	"version": "0.1",
+	"manifest_version": 2,
+	"permissions": [
+	    "tabs",
+	    "activeTab",
+	    "storage",
+	    "declarativeContent",
+	    "https://*.github.com/*",
+	    "https://render.github.com/*",
+	    "https://raw.github.com/*",
+	    "https://github.com/*"
+	  ],
+	"background" : {
+
+		},
+	"options_page": "reviewOptions.html",
+	"content_scripts": [
+		{
+			"matches": ["https://github.com/*/pull/*"],
+			"js": ["reviewDisplay.js"]
+		}
+	],
+	"page_action": {
+		"default_title": "Review Some Code"
+	}
+
+}
