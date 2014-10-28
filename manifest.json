@@ -22,7 +22,6 @@
 		}
 	],
 	"page_action": {
-		"default_icon": "lambda-labs-logo_180x180.jpeg",
 		"default_title": "Review Some Code"
 	}
 
