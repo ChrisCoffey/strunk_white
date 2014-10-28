@@ -2,9 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-
-
-
 // When the extension is installed or upgraded ...
 chrome.runtime.onInstalled.addListener(function() {
   // Replace all rules ...
@@ -27,8 +24,9 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
+
 chrome.pageAction.onClicked.addListener(function(tab) {
-  console.log('Turning ' + tab.url + ' red!');
+  console.log("Creating the image");
   chrome.tabs.executeScript({
     code: "showReviewTemplate()"
   });

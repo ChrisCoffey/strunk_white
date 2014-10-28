@@ -8,13 +8,11 @@
 	    "activeTab",
 	    "storage",
 	    "declarativeContent",
-	    "https://*.github.com/*",
-	    "https://render.github.com/*",
-	    "https://raw.github.com/*",
-	    "https://github.com/*"
+	    "*://*/*"
 	  ],
 	"background" : {
-
+	    "page": "background.html",
+    	"persistent": false
 		},
 	"options_page": "reviewOptions.html",
 	"content_scripts": [
@@ -24,6 +22,7 @@
 		}
 	],
 	"page_action": {
+		"default_icon": "lambda-labs-logo_180x180.jpeg",
 		"default_title": "Review Some Code"
 	}
 
