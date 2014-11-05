@@ -1,9 +1,9 @@
 ## Codebase
 ---------------
 + Readability
-	* 
+	- [ ] Yes
 + Complexity
-	*
+	- [ ] Yes
 + DRY (Repeated Code)
 	* 
 + Duplicated Functions
